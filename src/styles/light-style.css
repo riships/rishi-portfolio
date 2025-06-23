@@ -1,0 +1,11 @@
+:root {
+    --bg-light-color: #ffffff;
+    --green-color: #037952;
+    --pink-color: #dd7e82;
+    --pink-color: #787d87;
+    --light-green-color: #787d87;
+}
+
+.theme-light {
+    background-color: #e5e7eb;
+}
