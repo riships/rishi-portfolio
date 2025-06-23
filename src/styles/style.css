@@ -6,6 +6,13 @@
     --light-green-color: #787d87;
 }
 
-.theme-light {
+.light-theme {
     background-color: #e5e7eb;
+    margin: 0;
+    padding: 0;
+}
+
+.light-theme .header {
+    background-color: #000;
+    border-radius: 12px;
 }
