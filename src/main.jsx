@@ -2,7 +2,7 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import App from './App.jsx'
 import './index.css';
-import './styles/style.css';
+import './assets/styles/style.css';
 import { ThemeProvider } from './context/ThemeContext.jsx';
 
 
@@ -11,5 +11,5 @@ createRoot(document.getElementById('root')).render(
     <ThemeProvider>
       <App />
     </ThemeProvider>
-  </StrictMode>,
+  </StrictMode>
 )

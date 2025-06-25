@@ -1,0 +1,192 @@
+:root {
+    --bg-light-color: #ffffff;
+    --green-color: #037952;
+    --pink-color: #dd7e82;
+    --grey-color: #676b74;
+    --light-green-color: #64ffc1;
+}
+
+h1,
+h2,
+.dev-heading,
+.highlight-text {
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: 600;
+    letter-spacing: -0.5px;
+}
+
+body {
+    font-family: 'IBM Plex Mono', monospace;
+    background-color: #0f0f0f;
+    color: #d0d0d0;
+}
+
+.light-theme {
+    background-color: #e5e7eb;
+    margin: 0 !important;
+    padding: 1px 0;
+}
+
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 30px;
+    background-color: #000;
+    border-radius: 12px;
+    margin: 20px 40px;
+}
+
+.header .logo h1 {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    color: #fff;
+    line-height: normal;
+    font-family: 600;
+}
+
+.header .logo h1 span:first-child {
+    color: var(--light-green-color);
+}
+
+.header .logo h1 span {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+    line-height: normal;
+}
+
+.header .nav ul,
+.header .social-links ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    color: #fff;
+    gap: 30px;
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+.hero-section {
+    background-color: var(--bg-light-color);
+    color: var(--text-color);
+    border-radius: 12px;
+    padding: 100px 60px;
+    min-height: calc(100vh - 160px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+.hero-main .hero-left {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 35%;
+}
+
+#pentagon {
+    color: var(--green-color);
+    position: relative;
+    height: 50px;
+    width: 50px;
+}
+
+#pentagon .pentagon-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+#pentagon span:not(.pentagon-bg) {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 2;
+    transform: translate(-50%, -50%);
+    display: flex;
+    font-size: 20px;
+    color: #fff;
+}
+
+
+.hero-main .hero-grid {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 20px;
+    width: 55%;
+}
+
+.hero-main .hero-grid .hero-right {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+}
+
+.hero-main .hero-grid .hero-right .intro-text {
+    font-size: 18px;
+    line-height: normal;
+}
+
+.hero-main .hero-grid .hero-right .intro-text span:first-child,
+.hero-main .hero-grid .hero-right .intro-text span:last-child {
+    color: var(--pink-color);
+    font-weight: 500;
+}
+
+.hero-main .hero-grid .hero-right .intro-text span {
+    color: var(--grey-color);
+    font-weight: 500;
+}
+
+
+.hero-main .hero-grid .hero-right .name-text {
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+    color: #000;
+}
+
+.hero-main .hero-grid .hero-right .name-text span {
+    color: var(--green-color);
+}
+
+.hero-main .hero-grid .hero-right .expertise-text {
+    font-size: 18px;
+    color: var(--grey-color);
+    font-weight: 500;
+    line-height: normal;
+}
+
+.hero-main .hero-grid .hero-right .expertise-text span {
+    color: var(--pink-color);
+}
+
+
+.skillIcons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.skillIcons span {
+    font-size: 18px;
+    color: #000;
+}
+
+.skillIcons img {
+    width: 30px;
+}
