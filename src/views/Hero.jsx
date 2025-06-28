@@ -1,6 +1,7 @@
 import React from "react";
 import userImg from '../assets/images/about-img.png'
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import SpotlightCard from "../components/SpotlightCard";
 
 export default function Hero() {
   return (
@@ -8,6 +9,7 @@ export default function Hero() {
       <div className="container">
         <div className="hero-main">
           <div className="hero-left">
+            {/* <SpotlightCard className="custom-spotlight-card" spotlightColor="rgba(255, 18, 14, 0.47)"> */}
             <div className="image-placeholder">
               <img src={userImg} alt="Developer" />
               <div id="pentagon">
@@ -19,6 +21,7 @@ export default function Hero() {
                 </span>
               </div>
             </div>
+            {/* </SpotlightCard> */}
           </div>
           <div className="hero-grid">
             <div className="hero-right">
