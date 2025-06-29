@@ -21,6 +21,10 @@ body {
     color: #d0d0d0;
 }
 
+section {
+    padding: 60px 0;
+}
+
 .light-theme {
     background-color: #e5e7eb;
     margin: 0 !important;
@@ -208,4 +212,35 @@ body {
 
 .skillIcons img {
     width: 30px;
+}
+
+
+.what-do-i-offer-sec {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 20px 0;
+    background-color: var(--bg-light-color);
+}
+
+.what-do-i-offer-sec h5.heading {
+    color: var(--green-color);
+    text-align: center;
+    font-size: 25px;
+    font-weight: 500;
+    line-height: normal;
+
+}
+
+.what-do-i-offer-sec h3.main-heading{
+    font-size: 30px;
+    font-weight: 600;
+    line-height: normal;
+    text-align: center;
+    padding: 20px 0;
+    color: #000;
+}
+
+.what-do-i-offer-sec h3.main-heading span{
+    color: var(--grey-color);
 }
