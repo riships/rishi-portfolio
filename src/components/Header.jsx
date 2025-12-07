@@ -23,7 +23,9 @@ function Header() {
             </button>
             <header className='header'>
                 <div className='logo'>
-                    <h1><span><FaChevronLeft /><FaChevronRight /></span><span>Rishi.Dev</span></h1>
+                    <Link to='/' className='logo-link'>
+                        <h1><span><FaChevronLeft /><FaChevronRight /></span><span>Rishi.Dev</span></h1>
+                    </Link>
                 </div>
                 <div className='nav'>
                     <ul>
