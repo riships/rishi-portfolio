@@ -1,0 +1,67 @@
+/* Stats Bar Styles */
+.stats-bar {
+    background-color: var(--bg-primary);
+    padding: 50px 40px;
+    border-top: 1px solid rgba(100, 255, 193, 0.12);
+    border-bottom: 1px solid rgba(100, 255, 193, 0.12);
+}
+
+.stats-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 35px;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.stat-card {
+    text-align: center;
+    padding: 35px 25px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, rgba(3, 121, 82, 0.08) 0%, rgba(100, 255, 193, 0.03) 100%);
+    border: 1px solid rgba(100, 255, 193, 0.15);
+    transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+    border-color: var(--accent-color);
+    box-shadow: 0 10px 35px rgba(100, 255, 193, 0.12);
+    transform: translateY(-8px);
+    background: linear-gradient(135deg, rgba(3, 121, 82, 0.12) 0%, rgba(100, 255, 193, 0.06) 100%);
+}
+
+.stat-icon {
+    color: var(--accent-bright);
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+}
+
+.stat-value {
+    font-size: 2.8rem;
+    font-weight: 800;
+    color: var(--text-primary);
+    margin: 12px 0;
+    font-family: 'IBM Plex Mono', monospace;
+    letter-spacing: -0.5px;
+}
+
+.stat-label {
+    color: var(--text-tertiary);
+    font-size: 0.9rem;
+    margin: 0;
+    font-weight: 500;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .stats-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .stats-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}

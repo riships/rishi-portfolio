@@ -1,5 +1,5 @@
 import React from "react";
-import userImg from '../assets/images/about-img.png'
+import userImg from '../assets/images/profile.png'
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import SpotlightCard from "../components/SpotlightCard";
 

@@ -1,0 +1,151 @@
+/* Services Styles */
+.services {
+    background-color: var(--bg-primary);
+    padding: 80px 40px;
+}
+
+.services-container {
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.services-title {
+    font-size: 2.8rem;
+    font-weight: 800;
+    color: var(--text-primary);
+    text-align: center;
+    margin-bottom: 70px;
+    line-height: 1.4;
+    font-family: 'IBM Plex Mono', monospace;
+    letter-spacing: -0.5px;
+}
+
+.services-title .highlight-text {
+    color: var(--accent-bright);
+    display: block;
+    margin-top: 12px;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 35px;
+    margin-bottom: 70px;
+}
+
+.service-card {
+    padding: 45px 35px;
+    background-color: var(--bg-secondary);
+    border: 1px solid rgba(100, 255, 193, 0.12);
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.service-card:hover {
+    border-color: var(--accent-color);
+    background-color: rgba(100, 255, 193, 0.08);
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(100, 255, 193, 0.12);
+}
+
+.service-icon {
+    font-size: 3rem;
+    color: var(--accent-bright);
+    margin-bottom: 20px;
+    display: inline-flex;
+    width: 80px;
+    height: 80px;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(100, 255, 193, 0.1);
+    border-radius: 12px;
+}
+
+.service-card h3 {
+    font-size: 1.3rem;
+    color: var(--text-primary);
+    margin: 20px 0;
+    font-family: 'IBM Plex Mono', monospace;
+}
+
+.service-card p {
+    color: var(--text-tertiary);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.services-footer {
+    text-align: center;
+    padding: 40px;
+    background-color: rgba(100, 255, 193, 0.05);
+    border: 1px solid rgba(100, 255, 193, 0.2);
+    border-radius: 12px;
+}
+
+.services-footer p {
+    color: var(--text-secondary);
+    font-size: 1.05rem;
+    margin: 0;
+    line-height: 1.6;
+}
+
+.highlight-link {
+    color: var(--accent-pink);
+    font-weight: 600;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.highlight-link:hover {
+    color: #ff9aa3;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .services {
+        padding: 50px 30px;
+    }
+
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .services {
+        padding: 40px 20px;
+    }
+
+    .services-title {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .services {
+        padding: 30px 15px;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .service-card {
+        padding: 25px;
+    }
+
+    .services-title {
+        font-size: 1.5rem;
+    }
+
+    .service-card h3 {
+        font-size: 1rem;
+    }
+
+    .service-card p {
+        font-size: 0.85rem;
+    }
+}

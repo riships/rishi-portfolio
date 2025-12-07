@@ -3,33 +3,46 @@ import { createContext, useContext, useState, useEffect } from "react";
 const ThemeContext = createContext();
 
 export const ThemeProvider = ({ children }) => {
-    const [theme, setTheme] = useState('light-theme');
+    const [theme, setTheme] = useState('dark');
+    const [mounted, setMounted] = useState(false);
+
     useEffect(() => {
-        const savedTheme = localStorage.getItem('theme') || 'light-theme';
+        const savedTheme = localStorage.getItem('theme') || 'dark';
         setTheme(savedTheme);
-        if (savedTheme === 'dark-theme') {
-            document.documentElement.classList.add('dark');
-        } else {
-            document.documentElement.classList.remove('dark');
-        }
+        document.documentElement.setAttribute('data-theme', savedTheme);
+        setMounted(true);
     }, []);
 
     const toggleTheme = () => {
-        const newTheme = theme === 'dark-theme' ? 'light-theme' : 'dark-theme';
-        setTheme(newTheme);
-        localStorage.setItem('theme', newTheme);
-
-        document.documentElement.classList.toggle('dark');
+        setTheme(prevTheme => {
+            const newTheme = prevTheme === 'dark' ? 'light' : 'dark';
+            localStorage.setItem('theme', newTheme);
+            document.documentElement.setAttribute('data-theme', newTheme);
+            return newTheme;
+        });
     };
+
+    if (!mounted) {
+        return (
+            <ThemeContext.Provider value={{ theme, toggleTheme }}>
+                {children}
+            </ThemeContext.Provider>
+        );
+    }
 
     return (
         <ThemeContext.Provider value={{ theme, toggleTheme }}>
-            <div className={`${theme} min-h-screen`}>
-                {children}
-            </div>
+            {children}
         </ThemeContext.Provider>
     );
 };
 
-export const useTheme = () => useContext(ThemeContext);
+export const useTheme = () => {
+    const context = useContext(ThemeContext);
+    if (!context) {
+        throw new Error('useTheme must be used within ThemeProvider');
+    }
+    return context;
+};
+
 export default ThemeContext;

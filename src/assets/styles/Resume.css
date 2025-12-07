@@ -1,0 +1,143 @@
+/* Resume Section */
+.resume-section {
+    padding: 80px 40px;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    min-height: 100vh;
+    transition: all 0.3s ease;
+}
+
+.resume-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.resume-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.resume-title {
+    font-size: 2.8rem;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    color: var(--text-primary);
+    margin: 0;
+}
+
+.download-btn {
+    padding: 12px 28px;
+    background: linear-gradient(135deg, var(--accent-bright) 0%, var(--accent-color) 100%);
+    color: var(--bg-primary);
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    display: inline-block;
+}
+
+.download-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(100, 255, 193, 0.25);
+}
+
+.resume-content {
+    width: 100%;
+    background: var(--bg-secondary);
+    border: 1px solid rgba(100, 255, 193, 0.15);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 40px var(--shadow-color);
+}
+
+.resume-iframe {
+    width: 100%;
+    height: 900px;
+    border: none;
+    display: block;
+}
+
+/* Responsive Resume Section */
+@media (max-width: 1024px) {
+    .resume-section {
+        padding: 60px 30px;
+    }
+
+    .resume-title {
+        font-size: 2.3rem;
+    }
+
+    .resume-iframe {
+        height: 800px;
+    }
+}
+
+@media (max-width: 768px) {
+    .resume-section {
+        padding: 60px 25px;
+    }
+
+    .resume-title {
+        font-size: 2rem;
+    }
+
+    .resume-header {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+        align-items: center;
+    }
+
+    .download-btn {
+        width: 100%;
+    }
+
+    .resume-iframe {
+        height: 700px;
+    }
+}
+
+@media (max-width: 600px) {
+    .resume-section {
+        padding: 40px 18px;
+    }
+
+    .resume-title {
+        font-size: 1.8rem;
+    }
+
+    .download-btn {
+        padding: 10px 20px;
+        font-size: 0.8rem;
+    }
+
+    .resume-iframe {
+        height: 600px;
+    }
+}
+
+@media (max-width: 480px) {
+    .resume-section {
+        padding: 30px 15px;
+    }
+
+    .resume-title {
+        font-size: 1.6rem;
+    }
+
+    .download-btn {
+        padding: 9px 16px;
+        font-size: 0.75rem;
+    }
+
+    .resume-iframe {
+        height: 500px;
+    }
+}

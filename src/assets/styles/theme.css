@@ -1,0 +1,207 @@
+/* Root Theme Variables */
+:root {
+    /* Light Theme Colors */
+    --bg-primary-light: #ffffff;
+    --bg-secondary-light: #f5f5f5;
+    --bg-tertiary-light: #efefef;
+    --text-primary-light: #1a1a1a;
+    --text-secondary-light: #4a4a4a;
+    --text-tertiary-light: #888888;
+    --border-color-light: #e0e0e0;
+    --accent-light: #037952;
+    --accent-light-bright: #64ffc1;
+    --accent-pink-light: #dd7e82;
+    --shadow-light: rgba(0, 0, 0, 0.1);
+    --shadow-hover-light: rgba(0, 0, 0, 0.15);
+    --bg-toggle-light: #f0f0f0;
+    --bg-toggle-hover-light: #e8e8e8;
+
+    /* Dark Theme Colors */
+    --bg-primary-dark: #0f0f0f;
+    --bg-secondary-dark: #1a1a1a;
+    --bg-tertiary-dark: #2a2a2a;
+    --text-primary-dark: #ffffff;
+    --text-secondary-dark: #d0d0d0;
+    --text-tertiary-dark: #b0b0b0;
+    --border-color-dark: rgba(100, 255, 193, 0.2);
+    --accent-dark: #037952;
+    --accent-dark-bright: #64ffc1;
+    --accent-pink-dark: #dd7e82;
+    --shadow-dark: rgba(0, 0, 0, 0.3);
+    --shadow-hover-dark: rgba(100, 255, 193, 0.1);
+    --bg-toggle-dark: #1a1a1a;
+    --bg-toggle-hover-dark: #2a2a2a;
+
+    /* Default to Dark Theme */
+    --bg-primary: var(--bg-primary-dark);
+    --bg-secondary: var(--bg-secondary-dark);
+    --bg-tertiary: var(--bg-tertiary-dark);
+    --text-primary: var(--text-primary-dark);
+    --text-secondary: var(--text-secondary-dark);
+    --text-tertiary: var(--text-tertiary-dark);
+    --border-color: var(--border-color-dark);
+    --accent-color: var(--accent-dark);
+    --accent-bright: var(--accent-dark-bright);
+    --accent-pink: var(--accent-pink-dark);
+    --shadow-color: var(--shadow-dark);
+    --shadow-hover: var(--shadow-hover-dark);
+    --bg-toggle: var(--bg-toggle-dark);
+    --bg-toggle-hover: var(--bg-toggle-hover-dark);
+}
+
+/* Light Theme */
+[data-theme="light"] {
+    --bg-primary: var(--bg-primary-light);
+    --bg-secondary: var(--bg-secondary-light);
+    --bg-tertiary: var(--bg-tertiary-light);
+    --text-primary: var(--text-primary-light);
+    --text-secondary: var(--text-secondary-light);
+    --text-tertiary: var(--text-tertiary-light);
+    --border-color: var(--border-color-light);
+    --accent-color: var(--accent-light);
+    --accent-bright: var(--accent-light-bright);
+    --accent-pink: var(--accent-pink-light);
+    --shadow-color: var(--shadow-light);
+    --shadow-hover: var(--shadow-hover-light);
+    --bg-toggle: var(--bg-toggle-light);
+    --bg-toggle-hover: var(--bg-toggle-hover-light);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'IBM Plex Mono', monospace;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    line-height: 1.6;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--accent-bright);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--accent-color);
+}
+
+/* Selection */
+::selection {
+    background-color: var(--accent-color);
+    color: var(--bg-primary);
+}
+
+/* Links */
+a {
+    color: var(--accent-bright);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--accent-color);
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+    color: var(--text-primary);
+    font-family: 'IBM Plex Mono', monospace;
+}
+
+/* Paragraphs */
+p {
+    color: var(--text-secondary);
+}
+
+/* Buttons */
+button {
+    font-family: 'IBM Plex Mono', monospace;
+    cursor: pointer;
+}
+
+/* Utility Classes */
+.highlight-text {
+    color: var(--accent-bright);
+}
+
+.accent-color {
+    color: var(--accent-color);
+}
+
+.text-secondary {
+    color: var(--text-secondary);
+}
+
+.text-tertiary {
+    color: var(--text-tertiary);
+}
+
+.bg-secondary {
+    background-color: var(--bg-secondary);
+}
+
+.border-accent {
+    border-color: var(--accent-color);
+}
+
+/* Responsive Base Styles */
+@media (max-width: 1024px) {
+    body {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    h3 {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 13px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    h3 {
+        font-size: 1rem;
+    }
+}

@@ -1,41 +1,44 @@
 import React from 'react'
 import { FaUserAlt } from "react-icons/fa";
-const soft = [
-  "Collaboration",
-  "Problem-solving",
-  "Communication",
-  "Time management",
-];
+import Header from '../components/Header';
+import '../assets/styles/About.css';
 
+const soft = [
+  "Communication",
+  "Teamwork",
+  "Problem Solving",
+  "Clean Code",
+];
 
 function About() {
   return (
     <>
-      <section className="py-20 bg-white">
-        <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">About Me</h2>
-        <div className="container mx-auto px-6 lg:flex lg:items-center lg:justify-center lg:gap-[30px] lg:space-x-12">
-          <img
-            src="/avatar.png"
-            alt="Rishi Soni"
-            className="w-64 h-64 rounded-xl object-cover shadow-lg mx-auto lg:mx-0"
-          />
-          <div className="mt-8 lg:mt-0 space-y-6">
-            <p className="text-gray-700 max-w-prose">
-              I’m Rishi Soni, a Frontend Developer with 2+ years of experience
-              building responsive, high‑performance web applications. Skilled in
-              JavaScript (ES6+), React, Node.js, and UI frameworks like Bootstrap. I
-              enjoy building things that live on the internet and make users' lives
-              easier.
-            </p>
-            <div className="grid grid-cols-2 gap-4">
-              {
-                soft.map((skill) => (
-                  <div className="flex items-center bg-purple-50 p-4 rounded-lg">
-                    <FaUserAlt className="w-5 h-5 text-purple-600 mr-2" />
-                    <span className="text-gray-800">{skill}</span>
-                  </div>
-                ))
-              }
+      <Header />
+      <section className="about-section">
+        <div className="about-container">
+          <h2 className="about-title">About Me</h2>
+          <div className="about-content">
+            <div className="about-image">
+              <img
+                src="https://via.placeholder.com/280x280?text=Profile"
+                alt="Rishi Soni"
+              />
+            </div>
+            <div className="about-text">
+              <p className="about-description">
+                I'm Rishi Prakash Soni, a Web Developer with 4 years of experience
+                in building responsive, scalable, and performance-driven web applications using the MERN stack. Specialized in JavaScript (ES6+), React.js, Node.js, Express.js, MongoDB, and API integration. Passionate about writing clean code, delivering exceptional user experiences, and deploying applications on cloud platforms like AWS, Vercel, and Render.
+              </p>
+              <div className="skills-grid">
+                {
+                  soft.map((skill, idx) => (
+                    <div key={idx} className="skill-card">
+                      <FaUserAlt className="skill-icon" />
+                      <span>{skill}</span>
+                    </div>
+                  ))
+                }
+              </div>
             </div>
           </div>
         </div>

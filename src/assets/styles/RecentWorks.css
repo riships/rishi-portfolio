@@ -1,0 +1,346 @@
+/* Recent Works Styles */
+.recent-works {
+    background-color: var(--bg-secondary);
+    padding: 60px 40px;
+}
+
+.works-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.works-title {
+    font-size: 2rem;
+    color: var(--text-primary);
+    margin-bottom: 60px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'IBM Plex Mono', monospace;
+}
+
+.title-icon {
+    font-size: 2.2rem;
+}
+
+.works-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    gap: 40px;
+}
+
+.work-card {
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.work-card:hover {
+    border-color: var(--accent-color);
+    background-color: rgba(100, 255, 193, 0.05);
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(100, 255, 193, 0.1);
+}
+
+.work-image {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.work-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.work-card:hover .work-image img {
+    transform: scale(1.05);
+}
+
+.work-content {
+    padding: 30px;
+}
+
+.work-content h3 {
+    font-size: 1.3rem;
+    color: var(--text-primary);
+    margin: 0 0 15px 0;
+    font-family: 'IBM Plex Mono', monospace;
+}
+
+.work-description {
+    color: var(--text-tertiary);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.work-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.detail-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.detail-item .label {
+    color: var(--accent-bright);
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+.detail-item .value {
+    color: var(--text-primary);
+    font-size: 0.9rem;
+}
+
+.work-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.tag {
+    display: inline-block;
+    padding: 6px 12px;
+    background-color: rgba(100, 255, 193, 0.1);
+    color: var(--accent-bright);
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    border: 1px solid rgba(100, 255, 193, 0.2);
+}
+
+.work-links {
+    display: flex;
+    gap: 15px;
+}
+
+.link-btn {
+    flex: 1;
+    padding: 12px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+}
+
+.link-btn.live-demo {
+    background-color: rgba(100, 255, 193, 0.1);
+    color: var(--accent-bright);
+    border-color: var(--accent-color);
+}
+
+.link-btn.live-demo:hover {
+    background-color: var(--accent-color);
+    color: var(--bg-primary);
+}
+
+.link-btn.github {
+    background-color: rgba(221, 126, 130, 0.1);
+    color: var(--accent-pink);
+    border-color: var(--accent-pink);
+}
+
+.link-btn.github:hover {
+    background-color: var(--accent-pink);
+    color: var(--bg-primary);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .recent-works {
+        padding: 50px 30px;
+    }
+
+    .works-grid {
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+        gap: 35px;
+    }
+
+    .works-title {
+        font-size: 1.8rem;
+        margin-bottom: 50px;
+    }
+
+    .title-icon {
+        font-size: 2rem;
+    }
+
+    .work-content {
+        padding: 25px;
+    }
+
+    .work-content h3 {
+        font-size: 1.2rem;
+    }
+
+    .work-description {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .recent-works {
+        padding: 40px 20px;
+    }
+
+    .works-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .works-title {
+        font-size: 1.5rem;
+        margin-bottom: 40px;
+    }
+
+    .title-icon {
+        font-size: 1.7rem;
+    }
+
+    .work-image {
+        height: 250px;
+    }
+
+    .work-content {
+        padding: 20px;
+    }
+
+    .work-content h3 {
+        font-size: 1.1rem;
+        margin-bottom: 12px;
+    }
+
+    .work-description {
+        font-size: 0.85rem;
+        margin-bottom: 15px;
+    }
+
+    .work-details {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        margin-bottom: 15px;
+        padding-bottom: 15px;
+    }
+
+    .detail-item .label {
+        font-size: 0.7rem;
+    }
+
+    .detail-item .value {
+        font-size: 0.85rem;
+    }
+
+    .work-tags {
+        gap: 8px;
+        margin-bottom: 15px;
+    }
+
+    .tag {
+        padding: 5px 10px;
+        font-size: 0.75rem;
+    }
+
+    .work-links {
+        gap: 10px;
+    }
+
+    .link-btn {
+        padding: 10px 15px;
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .recent-works {
+        padding: 30px 15px;
+    }
+
+    .works-grid {
+        gap: 15px;
+    }
+
+    .works-title {
+        font-size: 1.3rem;
+        margin-bottom: 30px;
+    }
+
+    .title-icon {
+        font-size: 1.5rem;
+    }
+
+    .work-image {
+        height: 200px;
+    }
+
+    .work-content {
+        padding: 15px;
+    }
+
+    .work-content h3 {
+        font-size: 1rem;
+        margin-bottom: 10px;
+    }
+
+    .work-description {
+        font-size: 0.8rem;
+        margin-bottom: 12px;
+        line-height: 1.5;
+    }
+
+    .work-details {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        margin-bottom: 12px;
+        padding-bottom: 12px;
+    }
+
+    .detail-item .label {
+        font-size: 0.65rem;
+    }
+
+    .detail-item .value {
+        font-size: 0.8rem;
+    }
+
+    .work-tags {
+        gap: 6px;
+        margin-bottom: 12px;
+    }
+
+    .tag {
+        padding: 4px 8px;
+        font-size: 0.7rem;
+    }
+
+    .work-links {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .link-btn {
+        padding: 10px 12px;
+        font-size: 0.8rem;
+    }
+}
