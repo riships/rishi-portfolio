@@ -3,21 +3,22 @@ name: Build and Deploy to GitHub Pages
 on:
   push:
     branches: [ main ]
-  pull_request:
-    branches: [ main ]
+  workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
 concurrency:
   group: "pages"
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   build:
     runs-on: ubuntu-latest
+    outputs:
+      artifact-id: ${{ steps.artifact.outputs.artifact-id }}
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -35,12 +36,13 @@ jobs:
         run: npm run build
 
       - name: Upload artifact
+        id: artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: './dist'
 
   deploy:
-    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+    if: github.ref == 'refs/heads/main'
     needs: build
     environment:
       name: github-pages
