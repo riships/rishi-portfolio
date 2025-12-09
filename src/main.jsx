@@ -10,7 +10,7 @@ import { ThemeProvider } from './context/ThemeContext.jsx';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <BrowserRouter basename="/rishi-portfolio/">
+    <BrowserRouter>
       <ThemeProvider>
         <App />
       </ThemeProvider>

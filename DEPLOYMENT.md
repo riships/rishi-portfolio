@@ -9,7 +9,7 @@ This portfolio is configured for automated deployment to GitHub Pages using GitH
 1. **Repository Settings**
    - Go to `Settings > Pages`
    - Select "GitHub Actions" as the build and deployment source
-   - The site will be published at: `https://riships.github.io/rishi-portfolio/`
+   - The site will be published at: `https://riships.github.io`
 
 2. **Automatic Deployment**
    - The `.github/workflows/deploy.yml` workflow automatically:

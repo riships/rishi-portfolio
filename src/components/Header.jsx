@@ -6,11 +6,11 @@ import '../assets/styles/ThemeToggle.css'
 
 function Header() {
     const { theme, toggleTheme } = useTheme()
-    
+
     return (
         <>
-            <button 
-                className="theme-toggle" 
+            <button
+                className="theme-toggle"
                 onClick={toggleTheme}
                 title={`Switch to ${theme === 'dark' ? 'light' : 'dark'} theme`}
                 aria-label={`Switch to ${theme === 'dark' ? 'light' : 'dark'} theme`}
