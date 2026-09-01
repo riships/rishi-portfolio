@@ -1,17 +1,23 @@
 import React from 'react'
-import { FaBriefcase, FaCode, FaBook } from 'react-icons/fa'
+import { FaBriefcase, FaCode, FaBook, FaRocket } from 'react-icons/fa'
 import '../assets/styles/Experience.css'
 
 function Experience() {
     const experiences = [
         {
             icon: FaBriefcase,
+            company: 'Startappss Systems India Private Limited',
+            title: 'Full Stack Developer',
+            description: 'Developing scalable web applications, RESTful APIs, and modern frontend interfaces using MERN stack technologies and cloud integrations. Collaborating in Agile Scrum workflows and managing sprint deliverables with Jira. (Nov 2025 – Present)'
+        },
+        {
+            icon: FaCode,
             company: 'Edunext Technologies Private Limited',
             title: 'Web Developer',
             description: 'Designed and developed responsive MERN applications. Built reusable React components and custom middleware. Delivered full-stack solutions with authentication and deployments on AWS, Vercel, and Render. (Sep 2022 – Oct 2025)'
         },
         {
-            icon: FaCode,
+            icon: FaRocket,
             company: 'Magic Edtech',
             title: 'Digital Media Trainee',
             description: 'Built interactive and visually appealing EPUB interfaces. Used HTML, CSS, and JavaScript for e-book UI development and multimedia content creation. (Dec 2021 – Aug 2022)'
@@ -30,7 +36,7 @@ function Experience() {
                 <h2 className="experience-title">
                     <span className="highlight-text">Experience</span>
                     <br />
-                    4 years of expertise in<br />MERN Stack Development
+                    4+ years of expertise in<br />MERN Stack Development
                 </h2>
 
                 <div className="experience-list">

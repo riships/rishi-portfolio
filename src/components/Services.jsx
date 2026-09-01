@@ -57,9 +57,6 @@ function Services() {
                     ))}
                 </div>
 
-                <div className="services-footer">
-                    <p>Excited to take on new projects and collaborations.<br />Let's make your vision a reality. <span className="highlight-link">Read more</span></p>
-                </div>
             </div>
         </section>
     )

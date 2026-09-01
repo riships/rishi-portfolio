@@ -3,15 +3,19 @@ import LandingPage from './components/LandingPage'
 import About from './views/About'
 import Contact from './views/Contact'
 import Resume from './views/Resume'
+import CustomCursor from './components/CustomCursor'
 
 function App() {
   return (
-    <Routes>
-      <Route path='/' element={<LandingPage />} />
-      <Route path='/about' element={<About />} />
-      <Route path='/contact' element={<Contact />} />
-      <Route path='/resume' element={<Resume />} />
-    </Routes>
+    <>
+      <CustomCursor />
+      <Routes>
+        <Route path='/' element={<LandingPage />} />
+        <Route path='/about' element={<About />} />
+        <Route path='/contact' element={<Contact />} />
+        <Route path='/resume' element={<Resume />} />
+      </Routes>
+    </>
   )
 }
 

@@ -1,44 +1,41 @@
 import React from 'react'
-import { FaCheckCircle } from 'react-icons/fa'
+import { FaPaperPlane, FaDownload } from 'react-icons/fa'
+import { Link } from 'react-router-dom'
 import '../assets/styles/HeroSection.css'
-import userImg from '../assets/images/profile.png'
+import userImg from '../assets/images/profile2.png'
 
 function HeroSection() {
     return (
         <section className="hero-section">
             <div className="hero-container">
                 <div className="hero-left">
-                    <div className="profile-image">
-                        <img src={userImg} alt="Profile" />
-                        <div className="online-badge"></div>
+                    <div className="profile-wrapper">
+                        <div className="profile-image">
+                            <img src={userImg} alt="Rishi Prakash" />
+                        </div>
                     </div>
                 </div>
                 <div className="hero-right">
                     <div className="role-label">
-                        <span className="label-tag">Current</span>
-                        <span className="label-text">Dec, 2025</span>
-                        <span className="label-tag">Open</span>
+                        <span className="label-tag">Available</span>
+                        <span className="label-text">Remote & On-Site Roles</span>
                     </div>
                     <h2 className="hero-title">
-                        Web Developer <span className="highlight">MERN</span> <br />
+                        Full Stack Developer <span className="highlight">MERN</span> <br />
                         Stack
                     </h2>
                     <p className="hero-description">
-                        Developer with 4 years of expertise in building responsive, scalable, and performance-driven web applications. Proficient in <span className="highlight">JavaScript</span>, <span className="highlight">Node.js</span>, <span className="highlight">React</span>, and <span className="highlight">MongoDB</span>. Focused on clean code, user experience, and cloud deployment. <span className="highlight-link">MERN Expert</span>
+                        Results-driven Full Stack Engineer with <span className="highlight">4+ years</span> of experience building modern, responsive, and performance-optimized web solutions using the <span className="highlight">MERN stack</span>. Passionate about <span className="highlight">clean code</span>, robust <span className="highlight">API architecture</span>, and <span className="highlight-link">AWS cloud deployment</span>.
                     </p>
-                    <div className="hero-stats">
-                        <div className="stat">
-                            <FaCheckCircle className="stat-icon" />
-                            <a href="#" className="stat-link">Top Freelancer</a>
-                        </div>
-                        <div className="stat">
-                            <FaCheckCircle className="stat-icon" />
-                            <a href="#" className="stat-link">Best Seller</a>
-                        </div>
-                        <div className="stat">
-                            <FaCheckCircle className="stat-icon" />
-                            <a href="#" className="stat-link">More Info</a>
-                        </div>
+                    <div className="hero-actions">
+                        <Link to="/contact" className="hero-btn primary-btn">
+                            <FaPaperPlane />
+                            <span>Contact Me</span>
+                        </Link>
+                        <a href="/Rishi_Fullstack_Resume_4years.pdf" download className="hero-btn secondary-btn">
+                            <FaDownload />
+                            <span>Download Resume</span>
+                        </a>
                     </div>
                 </div>
             </div>

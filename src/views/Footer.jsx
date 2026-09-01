@@ -15,10 +15,10 @@ function Footer() {
           </ul>
         </div>
         <div className="flex space-x-6 my-6 lg:my-0">
-          <a href="https://linkedin.com/in/rishisoni" target="_blank" className="hover:text-white">
+          <a href="https://linkedin.com/in/rishiparakash" target="_blank" rel="noopener noreferrer" className="hover:text-white">
             <FaLinkedin className="w-6 h-6" />
           </a>
-          <a href="https://github.com/rishisoni" target="_blank" className="hover:text-white">
+          <a href="https://github.com/riships" target="_blank" rel="noopener noreferrer" className="hover:text-white">
             <FaGithub className="w-6 h-6" />
           </a>
         </div>

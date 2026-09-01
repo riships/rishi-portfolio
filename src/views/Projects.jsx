@@ -1,32 +1,32 @@
+import React from 'react'
 import { FaExternalLinkAlt, FaGithub } from 'react-icons/fa'
+
 const projects = [
   {
     name: "Superhero Hunter App",
     img: "/projects/superhero.png",
     desc: "Search and learn about your favorite superheroes.",
     tech: ["React", "API"],
-    demo: "#",
-    repo: "#",
+    demo: null,
+    repo: "https://github.com/riships",
   },
   {
     name: "Blog Site (Node MVC)",
     img: "/projects/blog.png",
     desc: "Full CRUD blog platform using Node.js MVC.",
     tech: ["Node.js", "MongoDB"],
-    demo: "#",
-    repo: "#",
+    demo: null,
+    repo: "https://github.com/riships",
   },
   {
     name: "Timer Watch",
     img: "/projects/timer.png",
     desc: "Simple countdown timer built with vanilla JS.",
     tech: ["JavaScript"],
-    demo: "#",
-    repo: "#",
+    demo: null,
+    repo: "https://github.com/riships",
   },
 ];
-
-import React from 'react'
 
 function Projects() {
   return (
@@ -52,18 +52,26 @@ function Projects() {
                   ))}
                 </div>
                 <div className="mt-4 flex space-x-4">
-                  <a
-                    href={p.demo}
-                    className="flex-1 inline-flex justify-center items-center px-4 py-2 bg-purple-600 hover:bg-purple-700 text-white rounded-lg transition"
-                  >
-                    <FaExternalLinkAlt className="w-4 h-4 mr-2" /> Live Demo
-                  </a>
-                  <a
-                    href={p.repo}
-                    className="flex-1 inline-flex justify-center items-center px-4 py-2 border border-gray-300 hover:bg-gray-100 text-gray-700 rounded-lg transition"
-                  >
-                    <FaGithub className="w-4 h-4 mr-2" /> GitHub
-                  </a>
+                  {p.demo && p.demo !== '#' && (
+                    <a
+                      href={p.demo}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex-1 inline-flex justify-center items-center px-4 py-2 bg-purple-600 hover:bg-purple-700 text-white rounded-lg transition"
+                    >
+                      <FaExternalLinkAlt className="w-4 h-4 mr-2" /> Live Demo
+                    </a>
+                  )}
+                  {p.repo && p.repo !== '#' && (
+                    <a
+                      href={p.repo}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex-1 inline-flex justify-center items-center px-4 py-2 border border-gray-300 hover:bg-gray-100 text-gray-700 rounded-lg transition"
+                    >
+                      <FaGithub className="w-4 h-4 mr-2" /> GitHub
+                    </a>
+                  )}
                 </div>
               </div>
             </div>

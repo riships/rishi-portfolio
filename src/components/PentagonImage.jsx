@@ -20,6 +20,7 @@ export default function RoundedPentagonImage({ src, alt = "Profile" }) {
             </defs>
             <image
                 href={src}
+                aria-label={alt}
                 width="200"
                 height="200"
                 clipPath="url(#roundedPentagon)"

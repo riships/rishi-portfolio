@@ -5,10 +5,8 @@
 }
 
 .edu-research-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 60px;
-    max-width: 1200px;
+    display: block;
+    max-width: 900px;
     margin: 0 auto;
 }
 

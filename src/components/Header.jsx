@@ -37,12 +37,12 @@ function Header() {
                 <div className="social-links">
                     <ul>
                         <li>
-                            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                            <a href="https://linkedin.com/in/rishiparakash" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                                 <FaLinkedin />
                             </a>
                         </li>
                         <li>
-                            <a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                            <a href="https://github.com/riships" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
                                 <FaGithub />
                             </a>
                         </li>

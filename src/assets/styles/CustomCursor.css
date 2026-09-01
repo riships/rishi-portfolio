@@ -1,0 +1,140 @@
+/* Custom Round Circle Cursor Styles */
+
+/* Dark Theme Default Cursor Colors */
+:root,
+[data-theme="dark"] {
+    --cursor-dot-bg: #64ffc1;
+    --cursor-dot-shadow: rgba(100, 255, 193, 0.8);
+    --cursor-ring-border: #64ffc1;
+    --cursor-ring-shadow: rgba(100, 255, 193, 0.3);
+    
+    --cursor-dot-hover-bg: #dd7e82;
+    --cursor-dot-hover-shadow: rgba(221, 126, 130, 0.9);
+    --cursor-ring-hover-border: #dd7e82;
+    --cursor-ring-hover-bg: rgba(221, 126, 130, 0.15);
+    --cursor-ring-hover-shadow: rgba(221, 126, 130, 0.4);
+    
+    --cursor-ring-click-bg: rgba(100, 255, 193, 0.25);
+}
+
+/* Light Theme High-Contrast Cursor Colors */
+[data-theme="light"] {
+    --cursor-dot-bg: #028a5e;
+    --cursor-dot-shadow: rgba(2, 138, 94, 0.5);
+    --cursor-ring-border: #028a5e;
+    --cursor-ring-shadow: rgba(2, 138, 94, 0.25);
+    
+    --cursor-dot-hover-bg: #c0392b;
+    --cursor-dot-hover-shadow: rgba(192, 57, 43, 0.7);
+    --cursor-ring-hover-border: #c0392b;
+    --cursor-ring-hover-bg: rgba(192, 57, 43, 0.12);
+    --cursor-ring-hover-shadow: rgba(192, 57, 43, 0.35);
+    
+    --cursor-ring-click-bg: rgba(2, 138, 94, 0.2);
+}
+
+.custom-cursor-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 99999;
+    overflow: hidden;
+    transition: opacity 0.3s ease;
+}
+
+.cursor-hidden {
+    opacity: 0;
+}
+
+.cursor-visible {
+    opacity: 1;
+}
+
+/* Center Solid Round Dot */
+.cursor-dot {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 8px;
+    height: 8px;
+    margin-top: -4px;
+    margin-left: -4px;
+    background-color: var(--cursor-dot-bg);
+    border-radius: 50%;
+    pointer-events: none;
+    will-change: transform;
+    transition: width 0.2s ease, height 0.2s ease, margin 0.2s ease, background-color 0.25s ease, box-shadow 0.25s ease;
+    box-shadow: 0 0 10px var(--cursor-dot-shadow);
+}
+
+.cursor-dot.dot-hover {
+    width: 6px;
+    height: 6px;
+    margin-top: -3px;
+    margin-left: -3px;
+    background-color: var(--cursor-dot-hover-bg);
+    box-shadow: 0 0 12px var(--cursor-dot-hover-shadow);
+}
+
+.cursor-dot.dot-clicked {
+    transform: scale(0.6);
+}
+
+/* Outer Trailing Round Circle Ring */
+.cursor-ring {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 36px;
+    height: 36px;
+    margin-top: -18px;
+    margin-left: -18px;
+    border: 1.5px solid var(--cursor-ring-border);
+    border-radius: 50%;
+    pointer-events: none;
+    will-change: transform;
+    transition: width 0.25s cubic-bezier(0.25, 1, 0.5, 1),
+                height 0.25s cubic-bezier(0.25, 1, 0.5, 1),
+                margin 0.25s cubic-bezier(0.25, 1, 0.5, 1),
+                border-color 0.25s ease,
+                background-color 0.25s ease,
+                box-shadow 0.25s ease;
+    box-shadow: 0 0 12px var(--cursor-ring-shadow);
+}
+
+/* Hover state on interactive elements */
+.cursor-ring.ring-hover {
+    width: 54px;
+    height: 54px;
+    margin-top: -27px;
+    margin-left: -27px;
+    border-color: var(--cursor-ring-hover-border);
+    background-color: var(--cursor-ring-hover-bg);
+    box-shadow: 0 0 20px var(--cursor-ring-hover-shadow);
+}
+
+/* Click state */
+.cursor-ring.ring-clicked {
+    width: 28px;
+    height: 28px;
+    margin-top: -14px;
+    margin-left: -14px;
+    background-color: var(--cursor-ring-click-bg);
+}
+
+/* Adjust pointer styles for interactive elements on desktop */
+@media (hover: hover) and (pointer: fine) {
+    body, a, button, input, select, textarea, [role="button"] {
+        cursor: default;
+    }
+}
+
+/* Disable custom cursor on touch screens */
+@media (pointer: coarse) {
+    .custom-cursor-container {
+        display: none !important;
+    }
+}
